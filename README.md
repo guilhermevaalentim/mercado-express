@@ -1,4 +1,4 @@
-# [Nome do projeto] 🛒
+# Mercado Express 🛒
 
 Projeto de estudo em Python com tema de **mercado**. O foco é o back-end:
 manter e organizar os dados da aplicação, sem interface gráfica ou mobile.
