@@ -6,8 +6,8 @@ manter e organizar os dados da aplicação, sem interface gráfica ou mobile.
 ## Funcionalidades
 
 - [x] Menu interativo no terminal
-- [ ] Cadastrar [mercado/produto]
-- [ ] Listar [mercados/produtos]
+- [x] Cadastrar [mercado/produto]
+- [x] Listar [mercados/produtos]
 - [ ] Ativar/desativar [mercado/produto]
 
 ## Tecnologias
