@@ -8,7 +8,7 @@ manter e organizar os dados da aplicação, sem interface gráfica ou mobile.
 - [x] Menu interativo no terminal
 - [x] Cadastrar produtos
 - [x] Listar produtos
-- [ ] Ativar/desativar produtos
+- [x] Ativar/desativar produtos
 
 ## Tecnologias
 
