@@ -1,6 +1,8 @@
 import os
 
-produtos = ['Arroz', 'Feijão', 'Macarrão']
+produtos = [{'nome':'Arroz', 'categoria':'Comida', 'ativo':True},
+            {'nome':'Feijão', 'categoria':'Comida', 'ativo':False},
+            {'nome':'Queijo', 'categoria':'Comida', 'ativo':False}]
 
 def exibir_nome_app():
     print("""
@@ -60,7 +62,9 @@ def cadastrar_produto():
     os.system('cls')
     exibir_subtitulo('Cadastrar um produto')
     nome_do_produto = input('Digite o nome do produto: ')
-    produtos.append(nome_do_produto)
+    categoria = input(f'Digite o nome da categoria do produto {nome_do_produto}: ')
+    dados_do_produto = {'nome':nome_do_produto, 'categoria':categoria, 'ativo':False}
+    produtos.append(dados_do_produto)
     print(f'O produto {nome_do_produto} foi cadastrado com sucesso!')
     voltar_ao_menu_principal()
 
@@ -68,7 +72,23 @@ def listar_produtos():
     os.system('cls')
     exibir_subtitulo('Listando todos os produtos')
     for produto in produtos:
-        print(f'.{produto}')
+        nome_produto = produto['nome']
+        categoria = produto['categoria']
+        ativo = 'Ativado' if produto ['ativo'] else 'Desativado'
+        print(f'- {nome_produto} | {categoria} | {ativo}')
+    voltar_ao_menu_principal()
+
+def alternar_estado_produto():
+    exibir_subtitulo('Alterando estado do produto')
+    nome_produto = input('Digite o nome do produto que deseja alterar o estado: ')
+    for produto in produtos:
+        if nome_produto == produto['nome']:
+            produto_encontrado = True
+            produto['ativo'] = not produto['ativo']
+            mensagem = f'O produto {nome_produto} foi ativado com sucesso' if produto ['ativo'] else f'O produto {nome_produto} foi desativado com sucesso'
+            print(mensagem)
+    if not produto_encontrado:
+        print('O produto não foi encontrado')
     voltar_ao_menu_principal()
 
 def opçao_escolhida(): 
@@ -80,7 +100,7 @@ def opçao_escolhida():
         elif opcao_escolhida == 2:
             listar_produtos()
         elif opcao_escolhida == 3:
-            print('Ativar Produto')
+            alternar_estado_produto()
         elif opcao_escolhida == 4:
             finalizar_app()
         else:
