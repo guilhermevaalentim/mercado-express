@@ -1,23 +1,35 @@
 # Mercado Express 🛒
 
-Projeto de estudo em Python com tema de **mercado**. O foco é o back-end:
-manter e organizar os dados da aplicação, sem interface gráfica ou mobile.
+Aplicação de terminal em Python para gerenciar produtos de um mercado. Projeto de estudo para praticar lógica de programação, estrutura de dados e organização de código.
 
 ## Funcionalidades
 
-- [x] Menu interativo no terminal
-- [x] Cadastrar produtos
-- [x] Listar produtos
-- [x] Ativar/desativar produtos
+- Menu interativo no terminal
+- Cadastrar produtos
+- Listar produtos
+- Ativar e desativar produtos
 
 ## Tecnologias
 
 - Python 3
 
-## Objetivo
+## Como executar
 
-Praticar lógica de programação, estrutura de dados e organização de código
-como parte da minha formação em back-end com Python.
+Pré-requisito: Python 3 instalado.
+
+```bash
+git clone https://github.com/guilhermevaalentim/mercado-express.git
+cd mercado-express
+python app.py     # Windows
+python3 app.py    # Linux / macOS
+```
+
+## Limitações e próximos passos
+
+- [ ] Salvar os produtos em arquivo (hoje voltam à lista inicial ao fechar o programa)
+- [ ] Impedir produtos com nome repetido
+- [ ] Ignorar maiúsculas e minúsculas ao buscar um produto
+- [ ] Tornar a limpeza de tela compatível com Linux e macOS (hoje usa `cls`)
 
 ## Autor
 
